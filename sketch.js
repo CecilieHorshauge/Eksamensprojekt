@@ -1,10 +1,15 @@
 function setup() {
   createCanvas(400, 400);
   // restartknap
+
   // Lav knap btn1
+ let btn1 = createButton("btn1")
   // Lav knap btn2
+  let btn2 = createButton("btn2")
   // Lav knap btn3
+  let btn3 = createButton("btn3")
   // Lav knap btn4
+  let btn4 = createButton("btn4")
 }
 
 function draw() {
