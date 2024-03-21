@@ -26,9 +26,10 @@ Når btn4 trykkes på "pushes" værdien 4 i playerArray
 
 // Sammenligning
 
-funktion Comparison
-for i < længden af randomArray
-  hvis RandomArray[i] = PlayerArray[i]
-    ellers udskriv "You failed" i konsollen
-  hvis i = længden af randomArray - 1
-  så udskriv "Congratulations"
+function Comparison(){
+  for (let i = 0; i < randomArray.length; i++)
+  if (RandomArray[i] === PlayerArray[i]){}
+    else console.log("You failed")
+  if (i === randomArray.length - 1){
+    console.log("Congratulations")
+}}
