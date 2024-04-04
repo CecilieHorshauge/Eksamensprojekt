@@ -1,40 +1,43 @@
+let btn1, btn2, btn3, btn4;
+
 function setup() {
   createCanvas(400, 400);
   // restartknap
 
   // Lav knap btn1
- let btn1 = createButton("btn1")
+  btn1 = createButton("btn1")
   // Lav knap btn2
-  let btn2 = createButton("btn2")
+  btn2 = createButton("btn2")
   // Lav knap btn3
-  let btn3 = createButton("btn3")
+  btn3 = createButton("btn3")
   // Lav knap btn4
-  let btn4 = createButton("btn4")
+  btn4 = createButton("btn4")
+  // Spiller input
+  btn1.mousePressed(() => playerArray.push(1))
+  btn2.mousePressed(() => playerArray.push(2))
+  btn3.mousePressed(() => playerArray.push(3))
+  btn4.mousePressed(() => playerArray.push(4))
 }
 
 function draw() {
   background(220);
+  if (randomArray.length === playerArray.length) {
+    Comparison()
+  }
 }
-// Pseudokode
 
-randomArray defineres
-playerArray initialiseres
-
-// Knapper
-
-
-// Spiller input
-Når btn1 trykkes på "pushes" værdien 1 i playerArray
-Når btn2 trykkes på "pushes" værdien 2 i playerArray
-Når btn3 trykkes på "pushes" værdien 3 i playerArray
-Når btn4 trykkes på "pushes" værdien 4 i playerArray
+let randomArray = [1, 2, 3, 4];
+console.log(randomArray)
+let playerArray = [];
 
 // Sammenligning
 
-function Comparison(){
-  for (let i = 0; i < randomArray.length; i++)
-  if (RandomArray[i] === PlayerArray[i])
-    else console.log("You failed")
-  if (i === randomArray.length - 1){
-    console.log("Congratulations")
-}}
+function Comparison() {
+  let indentical = true;
+  for (let i = 0; i < randomArray.length; i++) {
+    if (randomArray[i] !== playerArray[i]) { indentical = false }
+  }
+  if (indentical) { console.log("Congratulations") }
+    else {console.log("You failed... Congrats")}
+  playerArray=[]
+}
