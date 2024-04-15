@@ -7,7 +7,9 @@ let CurrentColor = 0;
 function setup() {
   createCanvas(400, 400);
   // restartknap
-
+  // Lav start- og submit-knap
+  btnStart = createButton("Start")
+  btnSubmit = createButton("Submit")
   // Lav knap btn1
   btn1 = createButton("btn1")
   // Lav knap btn2
@@ -17,6 +19,8 @@ function setup() {
   // Lav knap btn4
   btn4 = createButton("btn4")
   // Spiller input
+  // btnStart.mousePressed(() => DisplaySequence())
+  btnSubmit.mousePressed(() => Comparison())
   btn1.mousePressed(() => playerArray.push(1))
   btn2.mousePressed(() => playerArray.push(2))
   btn3.mousePressed(() => playerArray.push(3))
@@ -44,8 +48,6 @@ function draw() {
   if (randomArray.length === playerArray.length) {
     Comparison()
   }
-  ChangeColor(Buttons[CurrentColor % Buttons.length]);
-  CurrentColor++;
 }
 
 let randomArray = [1, 2, 3, 4];
