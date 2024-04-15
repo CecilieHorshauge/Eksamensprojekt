@@ -13,12 +13,20 @@ function setup() {
   btnSubmit = createButton("Submit")
   // Lav knap btn1
   btn1 = createButton("btn1")
+  btn1.position(50,20);
+  btn1.size(50,25)
   // Lav knap btn2
   btn2 = createButton("btn2")
+  btn2.position(50,70);
+  btn2.size(50,25)
   // Lav knap btn3
   btn3 = createButton("btn3")
+  btn3.position(50,120);
+  btn3.size(50,25)
   // Lav knap btn4
   btn4 = createButton("btn4")
+  btn4.position(50,170);
+  btn4.size(50,25)
 
   // Spiller input
   // btnStart.mousePressed(() => DisplaySequence())
