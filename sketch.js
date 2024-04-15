@@ -11,14 +11,13 @@ function setup() {
   // Lav start- og submit-knap
   btnStart = createButton("Start")
   btnSubmit = createButton("Submit")
-  // Lav knap btn1
-  btn1 = createButton("btn1")
-  // Lav knap btn2
-  btn2 = createButton("btn2")
-  // Lav knap btn3
-  btn3 = createButton("btn3")
-  // Lav knap btn4
-  btn4 = createButton("btn4")
+
+
+  for (let i = 0; i < 4; i++) {
+    let Buttons1 = createButton("btn1","btn2", "btn3", "btn4");
+    Buttons1.position(40, i * 50 + 20);
+    Buttons1.size(25,25)
+
   // Spiller input
   // btnStart.mousePressed(() => DisplaySequence())
   frameRate(1)
