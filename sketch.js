@@ -1,5 +1,5 @@
 let btn1, btn2, btn3, btn4;
-let buttons = [];
+let buttons1 = [];
 let colors = ["rgb(255, 182, 193)", "rgb(107, 70, 227)", "rgb(145, 196, 108)", "rgb(227, 220, 93)"];
 let currentColor = 0;
 let btnStart, btnSubmit;
@@ -44,7 +44,7 @@ function setup() {
     Btn1.size(25, 25)
     Btn1.style("background-color", "white");
 
-    buttons.push(Btn1);
+    buttons1.push(Btn1);
   }
   
 }
