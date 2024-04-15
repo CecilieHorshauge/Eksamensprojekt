@@ -36,10 +36,10 @@ function setup() {
 
     Buttons.push(Btn1);
   }
-  
+  randomArray = [random([1,2,3,4])];
+  console.log(randomArray)
 }
-randomArray = [1, 2, 3, 4];
-console.log(randomArray)
+
 
 
 
@@ -56,9 +56,15 @@ function Comparison() {
   for (let i = 0; i < randomArray.length; i++) {
     if (randomArray[i] !== playerArray[i]) { indentical = false }
   }
-  if (indentical) { console.log("Congratulations") }
-  else { console.log("You failed... Congrats") }
-  frameRate(0)
+  if (indentical) {
+    console.log("Congratulations")
+    randomArray.push(random([1,2,3,4]))
+    console.log(randomArray)
+  }
+  else { 
+    console.log("You failed... Congrats")
+    frameRate(0)
+  }
   playerArray = []
 }
 
