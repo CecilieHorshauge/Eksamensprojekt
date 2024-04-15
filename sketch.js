@@ -1,11 +1,10 @@
 let btn1, btn2, btn3, btn4;
-let buttons1 = [];
-let colors = ["rgb(255, 182, 193)", "rgb(107, 70, 227)", "rgb(145, 196, 108)", "rgb(227, 220, 93)"];
-let currentColor = 0;
+let Buttons = [];
+let farver = ["rgb(255, 182, 193)", "rgb(107, 70, 227)", "rgb(145, 196, 108)", "rgb(227, 220, 93)"];
+let CurrentColor = 0;
 let btnStart, btnSubmit;
 let playerArray = [];
 let randomArray = [];
-
 function setup() {
   createCanvas(400, 400);
   // restartknap
@@ -44,7 +43,7 @@ function setup() {
     Btn1.size(25, 25)
     Btn1.style("background-color", "white");
 
-    buttons1.push(Btn1);
+    Buttons.push(Btn1);
   }
   
 }
@@ -55,8 +54,8 @@ console.log(randomArray)
 
 function draw() {
   background(220);
-  ChangeColor(buttons1[currentColor % buttons1.length]);
-  currentColor++;
+  ChangeColor(Buttons[CurrentColor % Buttons.length]);
+  CurrentColor++;
 }
 
 // Sammenligning
@@ -74,11 +73,11 @@ function Comparison() {
 
 //funktion til at skifte farve
 function ChangeColor(Btn1) {
-  let originalColor = Btn1.style("background-color"); // Gem den originale farve
-  let newColor = colors[currentColor % colors.length]; // Vælg en ny farve baseret på nuværende indeks
-  Btn1.style("background-color", newColor); // Sæt ny farve
+  let originalFarve = Btn1.style("background-color"); // Gem den originale farve
+  let nyFarve = farver[CurrentColor % farver.length]; // Vælg en ny farve baseret på nuværende indeks
+  Btn1.style("background-color", nyFarve); // Sæt ny farve
 
   setTimeout(() => {
-    Btn1.style("background-color", originalColor); // Sæt tilbage til original efter 1 sekund
+    Btn1.style("background-color", originalFarve); // Sæt tilbage til original efter 1 sekund
   }, 1000);
 }
