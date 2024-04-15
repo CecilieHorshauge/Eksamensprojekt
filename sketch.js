@@ -1,5 +1,5 @@
 let btn1, btn2, btn3, btn4;
-
+let btnStart, btnSubmit;
 function setup() {
   createCanvas(400, 400);
   // restartknap
