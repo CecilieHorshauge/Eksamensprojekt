@@ -55,7 +55,7 @@ console.log(randomArray)
 
 function draw() {
   background(220);
-  ChangeColor(buttons[currentColor % Buttons.length]);
+  ChangeColor(buttons1[currentColor % buttons1.length]);
   currentColor++;
 }
 
