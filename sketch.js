@@ -57,7 +57,7 @@ function setup() {
   // Startknap
   btnStart.mousePressed(() => {
     randomArray.push(Math.floor(Math.random() * 4)); // Tilføj et nyt tilfældigt index
-    displaySequence(); // Vis sekvens
+    DisplaySequence(); // Vis sekvens
   });
 
   btnSubmit.mousePressed(Comparison);
@@ -67,7 +67,7 @@ function draw(){
   text(message, 160,110)
 }
 
-function displaySequence() {
+function DisplaySequence() {
   let i = 0;
   let interval = setInterval(() => {
     if (i >= randomArray.length) {
@@ -98,7 +98,7 @@ function Comparison() {
     message = "Congratulations";
     setTimeout(HideMessage,1500)
     randomArray.push(Math.floor(Math.random() * 4)); // Tilføj et nyt tilfældigt index
-    setTimeout(displaySequence, 1000); // Vent lidt og vis ny sekvens
+    setTimeout(DisplaySequence, 1000); // Vent lidt og vis ny sekvens
   } else {
     randomArray = [];
     HideMessage()
