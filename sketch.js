@@ -14,10 +14,12 @@ let playerArray = [];
 let randomArray = [];
 
 function setup() {
-  createCanvas(400, 215);
+  createCanvas(400, 260);
   background(220)
   btnStart = createButton("Start");
+  btnStart.position(20,220)
   btnSubmit = createButton("Submit");
+  btnSubmit.position(70,220)
 
  // Der laves en knap til farven pink
   btn1 = createButton("Pink");
